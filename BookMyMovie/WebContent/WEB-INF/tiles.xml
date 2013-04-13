@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/adminPageBaseLayout.jsp">
+		<put-attribute name="title" value="Admin CP" />
+		<put-attribute name="header" value="/adminPageHeader.jsp" />
+		<put-attribute name="body" value="/adminPageBody.jsp" />
+		<put-attribute name="footer" value="/adminPageFooter.jsp" />
+	</definition>
+
+	<definition name="aboutPage" extends="baseLayout">
+		<put-attribute name="title" value="About Us" />
+		<put-attribute name="body" value="/AboutUs.jsp" />
+	</definition>
+	
+	<definition name="addCityOp" extends="baseLayout">
+		<put-attribute name="title" value="Add new City" />
+		<put-attribute name="body" value="/addCity.jsp" />
+	</definition>
+	
+	<definition name="viewCityOp" extends="baseLayout">
+		<put-attribute name="title" value="View Existing Cities" />
+		<put-attribute name="body" value="/viewCities.jsp" />
+	</definition>
+	
+	<definition name="modifyCityOp" extends="baseLayout">
+		<put-attribute name="title" value="Modify Existing City" />
+		<put-attribute name="body" value="/modifyCity.jsp" />
+	</definition>
+	
+
+	<definition name="addCinemaOp" extends="baseLayout">
+		<put-attribute name="title" value="Add new Cinema Theatre" />
+		<put-attribute name="body" value="/addCinema.jsp" />
+	</definition>
+	
+	<definition name="viewCinemaOp" extends="baseLayout">
+		<put-attribute name="title" value="View Existing Cinema Theatres" />
+		<put-attribute name="body" value="/viewCinemas.jsp" />
+	</definition>
+	
+	<definition name="modifyCinemaOp" extends="baseLayout">
+		<put-attribute name="title" value="Modify Existing Cinema" />
+		<put-attribute name="body" value="/modifyCinema.jsp" />
+	</definition>
+	
+	
+	<definition name="addScreenOp" extends="baseLayout">
+		<put-attribute name="title" value="Add new Cinema Screen" />
+		<put-attribute name="body" value="/addScreen.jsp" />
+	</definition>
+	
+	<definition name="viewScreenOp" extends="baseLayout">
+		<put-attribute name="title" value="View Existing Cinema Screens" />
+		<put-attribute name="body" value="/viewScreens.jsp" />
+	</definition>
+	
+	<definition name="modifyScreenOp" extends="baseLayout">
+		<put-attribute name="title" value="Modify Existing Screen" />
+		<put-attribute name="body" value="/modifyScreen.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="addMovieOp" extends="baseLayout">
+		<put-attribute name="title" value="Add new Movie" />
+		<put-attribute name="body" value="/addMovie.jsp" />
+	</definition>
+	
+	<definition name="viewMovieOp" extends="baseLayout">
+		<put-attribute name="title" value="View Existing Movies" />
+		<put-attribute name="body" value="/viewMovies.jsp" />
+	</definition>
+	
+	<definition name="modifyMovieOp" extends="baseLayout">
+		<put-attribute name="title" value="Modify Existing Movies" />
+		<put-attribute name="body" value="/modifyMovie.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="addScheduleOp" extends="baseLayout">
+		<put-attribute name="title" value="Add new Schedule" />
+		<put-attribute name="body" value="/addSchedule.jsp" />
+	</definition>
+	
+	<definition name="viewScheduleOp" extends="baseLayout">
+		<put-attribute name="title" value="View Existing Schedules" />
+		<put-attribute name="body" value="/viewSchedules.jsp" />
+	</definition>
+	
+	<definition name="modifyScheduleOp" extends="baseLayout">
+		<put-attribute name="title" value="Modify Existing Schedules" />
+		<put-attribute name="body" value="/modifySchedule.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="viewSeatMapOp" extends="baseLayout">
+		<put-attribute name="title" value="View Existing Seating Plan" />
+		<put-attribute name="body" value="/viewSeatmapSeats.jsp" />
+	</definition>
+	<definition name="AllTransactions" extends="baseLayout">
+		<put-attribute name="title" value="View All Transactions" />
+		<put-attribute name="body" value="/AllTransactions.jsp" />
+	</definition>
+
+</tiles-definitions>

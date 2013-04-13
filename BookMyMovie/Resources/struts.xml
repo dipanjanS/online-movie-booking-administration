@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+
+	<package name="default" extends="struts-default" namespace="/">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		
+		<action name="adminLogin" class="com.admin.action.AdminLogin">
+			<result name="success" type="tiles">baseLayout</result>
+			<result name="error">adminLoginPage.jsp</result>
+		</action>
+		
+		<action name="homePage" class="com.admin.action.HomePage">
+			<result name="success" type="tiles">baseLayout</result>
+			<result name="error">adminLoginPage.jsp</result>
+		</action>
+		
+		<action name="aboutPage" class="com.admin.action.HomePage">
+			<result name="success" type="tiles">aboutPage</result>
+			<result name="error">adminLoginPage.jsp</result>
+		</action>
+		
+		
+		<action name="addCityPanel" class="com.admin.action.CityOperations" method="cityOpPanel">
+			<result name="success" type="tiles">addCityOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="addCities" class="com.admin.action.CityOperations" method="addNewCity">
+			<result name="success" type="tiles">addCityOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="viewCities" class="com.admin.action.CityOperations" method="displayCities">
+			<result name="success" type="tiles">viewCityOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="modifyCity" class="com.admin.action.CityOperations" method="getCityToModify">
+			<result name="success" type="tiles">modifyCityOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="updateCity" class="com.admin.action.CityOperations" method="updateModifiedCity">
+			<result name="success" type="redirect">viewCities</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+				
+		<action name="deleteCity" class="com.admin.action.CityOperations" method="deleteCity">
+			<result name="success" type="redirect">viewCities</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		
+		
+		<action name="addCinemaPanel" class="com.admin.action.CinemaOperations" method="cinemaOpPanel">
+			<result name="success" type="tiles">addCinemaOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="addCinemas" class="com.admin.action.CinemaOperations" method="addNewCinema">
+			<result name="success" type="tiles">addCinemaOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="viewCinemas" class="com.admin.action.CinemaOperations" method="displayCinemaTheatres">
+			<result name="success" type="tiles">viewCinemaOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="modifyCinema" class="com.admin.action.CinemaOperations" method="getCinemaToModify">
+			<result name="success" type="tiles">modifyCinemaOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="updateCinema" class="com.admin.action.CinemaOperations" method="updateModifiedCinema">
+			<result name="success" type="redirect">viewCinemas</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="deleteCinema" class="com.admin.action.CinemaOperations" method="deleteCinema">
+			<result name="success" type="redirect">viewCinemas</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		
+		
+		<action name="addScreenPanel" class="com.admin.action.ScreenOperations" method="screenOpPanel">
+			<result name="success" type="tiles">addScreenOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="addScreens" class="com.admin.action.ScreenOperations" method="addNewScreen">
+			<result name="success" type="tiles">addScreenOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="viewScreens" class="com.admin.action.ScreenOperations" method="displayScreens">
+			<result name="success" type="tiles">viewScreenOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="modifyScreen" class="com.admin.action.ScreenOperations" method="getScreenToModify">
+			<result name="success" type="tiles">modifyScreenOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="updateScreen" class="com.admin.action.ScreenOperations" method="updateModifiedScreen">
+			<result name="success" type="redirect">viewScreens</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="deleteScreen" class="com.admin.action.ScreenOperations" method="deleteScreen">
+			<result name="success" type="redirect">viewScreens</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		
+		
+		<action name="addMoviePanel" class="com.admin.action.MovieOperations" method="movieOpPanel">
+			<result name="success" type="tiles">addMovieOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="addMovies" class="com.admin.action.MovieOperations" method="addNewMovie">
+			<result name="success" type="tiles">addMovieOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="viewMovies" class="com.admin.action.MovieOperations" method="displayMovies">
+			<result name="success" type="tiles">viewMovieOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="modifyMovie" class="com.admin.action.MovieOperations" method="getMovieToModify">
+			<result name="success" type="tiles">modifyMovieOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="updateMovie" class="com.admin.action.MovieOperations" method="updateModifiedMovie">
+			<result name="success" type="redirect">viewMovies</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="deleteMovie" class="com.admin.action.MovieOperations" method="deleteMovie">
+			<result name="success" type="redirect">viewMovies</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		
+		
+		<action name="addSchedulePanel" class="com.admin.action.ScheduleOperations" method="scheduleOpPanel">
+			<result name="success" type="tiles">addScheduleOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="addSchedules" class="com.admin.action.ScheduleOperations" method="addNewSchedule">
+			<result name="success" type="tiles">addScheduleOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="viewSchedules" class="com.admin.action.ScheduleOperations" method="displaySchedules">
+			<result name="success" type="tiles">viewScheduleOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="modifySchedule" class="com.admin.action.ScheduleOperations" method="getScheduleToModify">
+			<result name="success" type="tiles">modifyScheduleOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="updateSchedule" class="com.admin.action.ScheduleOperations" method="updateModifiedSchedule">
+			<result name="success" type="redirect">viewSchedules</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="deleteSchedule" class="com.admin.action.ScheduleOperations" method="deleteSchedule">
+			<result name="success" type="redirect">viewSchedules</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		
+		
+		<action name="viewSeatmap" class="com.admin.action.SeatMapOperations" method="displaySeatmapSeats">
+			<result name="success" type="tiles">viewSeatMapOp</result>
+			<result name="error" type = "tiles">baseLayout</result>
+		</action>
+		
+		<action name="allTransactions" class="com.admin.action.AllTransactions" method="execute">
+			<result name="success" type="tiles">AllTransactions</result>
+		
+		</action>
+		
+		
+	</package>
+</struts>
