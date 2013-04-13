@@ -1,6 +1,6 @@
-<h1>online-movie-booking-administration</h1>
+<h1>Online-movie-booking-administration</h1>
 <hr>
-<br><br><br>
+<br>
 
 This project consist of an outline for an administrator's website which can be used for handling 
 operations related to typical online movie booking websites.
